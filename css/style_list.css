@@ -1,0 +1,247 @@
+body{
+  font-family: "Graphik","Tahoma",sans-serif;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+main{
+  height: 100%;
+  display: table-row;
+}
+
+header{
+  text-align: center;
+  width: 100%;
+  background-color: darkgrey;
+}
+
+footer{
+  text-align: center;
+  width: 100%;
+  background-color: darkgrey;
+}
+
+/* скрываем чекбокс */
+#menu__toggle {
+  opacity: 0;
+}
+/* стилизуем кнопку */
+.menu__btn {
+  display: flex; /* используем flex для центрирования содержимого */
+  align-items: center;  /* центрируем содержимое кнопки */
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+/* контейнер меню */
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  text-align: center;
+  background-color: #ECEFF1;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+/* элементы меню */
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+
+.info{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 15px;
+  border-radius: 16px;
+  background-color: #222222;
+  color: white;
+  padding-left: 25px;
+  padding-right: 15px;
+  padding-top: 15px;
+   padding-bottom: 15px;
+}
+
+.info img{
+  margin-left: 20px;
+}
+
+.info .main{
+  text-align: center;
+  font-size: 36px;
+  grid-gap: 8px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto-fit;
+    position: relative;
+}
+
+.info .main h1{
+  margin-top: 150px;
+}
+
+.info .dop-info{
+  margin-left: 75px;
+  grid-gap: 15px;
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  position: relative;
+}
+
+.info .dop-info article{
+  color:#171e29;
+  background-color: #fff;
+  border-radius: 16px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+.list{
+   margin-left: 20%;
+   margin-right: 20%;
+    grid-gap: 8px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto-fit;
+    position: relative;
+}
+
+.navigation{
+  margin-left: 250px;
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
+.java, .python, .php, .c, .ops {
+    padding-left: 25px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 16px;
+}
+
+.java, .python, .php, .c, .ops h2{
+    left: 10px;
+}
+
+.java{
+    background-color: #D0CBFB;
+}
+
+.python{
+    background-color: bisque;
+    
+}
+
+.php{
+    background-color: lightblue;
+}
+
+.c{
+  background-color: #E3F1FF;
+}
+
+.ops{
+  background-color: #FFF4BB;
+}
+
+
+
+
+.button{
+  align-items: center;
+  background-color: #06f;
+  border: 2px solid #06f;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 28px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:focus {
+  color: #171e29;
+}
+
+.button:hover {
+  background-color: #3385ff;
+  border-color: #3385ff;
+  fill: #06f;
+}
+

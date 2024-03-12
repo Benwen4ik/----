@@ -88,7 +88,7 @@ header {
 
     .menu__box {
       display: block;
-      position: fixed;
+      position: absolute;
       visibility: hidden;
       top: 0;
       left: -100%;

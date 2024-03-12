@@ -1,3 +1,9 @@
+body{
+  font-family: "Graphik","Tahoma",sans-serif;
+  height: 100vh;
+}
+
+
 th {
     font-weight: normal;
     color: #039;

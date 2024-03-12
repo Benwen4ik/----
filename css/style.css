@@ -1,9 +1,13 @@
 
-body{
+.main-box, .dop-info, .info, .comment, .form{
     margin-right: 200px;
     margin-left: 200px;
     margin-top: 35px;
     /* font-family: "Times", "Times New Roman", serif; */
+}
+
+body{
+    font-family: "Graphik","Tahoma",sans-serif;
 }
 
 main{

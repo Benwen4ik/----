@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
     <title>Форма регистрации</title>
 </head>
 <body>
     <header>
-        <h3>Online course</h3>
-        <div class="hamburger-menu">
+        <nav>
+          <ul class="nav-list">
+              <li><a  href="index.html">Главная</a></li>
+              <li><a href="page_list.html">Курсы</a></li>
+              <li><a href="page_comment.html">Отзывы</a></li>
+              <li><a href="page_table.html">Блог</a></li>
+              <li><a href="test.html">Контакты</a></li>
+          </ul>
+          <div class="toggle-btn">
+          <!-- <button class="toggle-btn"> -->
             <input id="menu__toggle" type="checkbox" />
             <label class="menu__btn" for="menu__toggle">
               <span></span>
@@ -18,11 +27,13 @@
               <li><a class="menu__item" href="index.html">Главная</a></li>
               <li><a class="menu__item" href="page_list.html">Курсы</a></li>
               <li><a class="menu__item" href="page_comment.html">Отзывы</a></li>
-              <li><a class="menu__item" href="#">Блог</a></li>
-              <li><a class="menu__item" href="#">Контакты</a></li>
+              <li><a class="menu__item" href="page_table.html">Блог</a></li>
+              <li><a class="menu__item" href="test.html">Контакты</a></li>
             </ul>
+          <!-- </button> -->
           </div>
-    </header>
+        </nav>
+      </header>
     <!-- <div class="navigation">
         <a class="button" href="index.html" >Начальная страница</a>
         <a class="button" href="page_course.html">Страница курса</a>
